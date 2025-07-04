@@ -1,0 +1,10 @@
+/* Main CSS Imports for Sudoku Solver */
+@import url('./reset.css');
+@import url('./layout.css');
+@import url('./logo.css');
+@import url('./panels.css');
+@import url('./board.css');
+@import url('./buttons.css');
+@import url('./utilities.css');
+@import url('./animations.css');
+@import url('./responsive.css'); 

@@ -1,0 +1,16 @@
+/* ==========================================================================
+   UTILITIES & STATES
+   ========================================================================== */
+
+/* Button hover and active color effect */
+.difficulty-btn:hover, .primary-btn:hover, .action-btn:hover {
+    filter: brightness(1.15);
+    box-shadow: 0 2px 12px rgba(52, 73, 94, 0.18);
+    transform: translateY(-2px) scale(1.04);
+    transition: filter 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.difficulty-btn:active, .primary-btn:active, .action-btn:active {
+    filter: brightness(0.92);
+    box-shadow: 0 1px 4px rgba(52, 73, 94, 0.10);
+    transform: translateY(1px) scale(0.98);
+} 

@@ -1,0 +1,85 @@
+/* ==========================================================================
+   PANELS & SECTIONS
+   ========================================================================== */
+
+.left-panel,
+.right-panel {
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border-radius: 18px;
+    padding: 32px 18px 32px 18px;
+    border: 2.5px solid rgba(118, 75, 162, 0.18);
+    box-shadow: 0 12px 40px 0 rgba(44, 62, 80, 0.18), 0 1.5px 8px 0 rgba(52, 152, 219, 0.10);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s, border 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 220px;
+    height: auto;
+}
+
+.left-panel:hover, .right-panel:hover {
+    box-shadow: 0 16px 48px 0 rgba(118, 75, 162, 0.22), 0 2px 12px 0 rgba(52, 152, 219, 0.18);
+    border-color: #764ba2;
+}
+
+.left-panel::before, .right-panel::before {
+    content: "";
+    position: absolute;
+    top: -30%; left: -30%;
+    width: 160%; height: 160%;
+    background: linear-gradient(120deg, rgba(102,126,234,0.10) 0%, rgba(118,75,162,0.12) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.left-panel > *, .right-panel > * {
+    position: relative;
+    z-index: 1;
+}
+
+.panel-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+    padding-left: 18px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.panel-section::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px; bottom: 12px;
+    width: 5px;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 0 12px 2px #764ba244;
+}
+
+.panel-section h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(52, 73, 94, 0.18);
+    letter-spacing: 1px;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: #fff;
+    background-clip: initial;
+}
+
+@media (max-width: 900px) {
+  .left-panel, .right-panel {
+    min-height: 0;
+    padding: 16px 4px;
+  }
+} 

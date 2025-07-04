@@ -1,0 +1,32 @@
+/* ==========================================================================
+   ANIMATIONS & OVERLAYS
+   ========================================================================== */
+
+#win-overlay {
+    background: rgba(52, 73, 94, 0.18);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    pointer-events: none;
+}
+#win-overlay div {
+    pointer-events: none;
+}
+
+/* Sparkle Animation */
+.sparkle {
+    box-shadow: 0 0 16px 4px #fff, 0 0 8px 2px #ffd700, 0 0 4px 1px #ff00cc;
+    opacity: 0.85;
+    animation: sparkleAnim 1.2s ease-out forwards;
+}
+@keyframes sparkleAnim {
+    0% { opacity: 0.85; transform: scale(1) translateY(0); }
+    60% { opacity: 1; }
+    100% { opacity: 0; transform: scale(0.2) translateY(-60px); }
+}
+
+@keyframes popWin {
+    0% { transform: scale(0.7) rotate(-8deg); opacity: 0; }
+    60% { transform: scale(1.15) rotate(4deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+

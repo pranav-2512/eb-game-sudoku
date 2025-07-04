@@ -1,0 +1,161 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    .game-layout {
+        grid-template-columns: 160px 1fr 160px;
+        gap: 12px;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .logo-section h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    html, body {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    .game-container, .game-layout {
+        height: 100%;
+        min-height: 0;
+        max-width: 100vw;
+    }
+    .game-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+    }
+    .left-panel, .right-panel, .center-panel, .game-board-container {
+        width: 100%;
+        max-width: 100vw;
+        min-width: 0;
+        margin: 0 auto;
+        padding: 4px 0;
+        box-sizing: border-box;
+        height: auto;
+        min-height: 0;
+    }
+    .panel-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .panel-section h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    .sudoku-board {
+        grid-template-columns: repeat(9, minmax(8vw, 1fr));
+        grid-template-rows: repeat(9, minmax(8vw, 1fr));
+        max-width: 98vw;
+        max-height: 60vw;
+    }
+    .sudoku-board .cell {
+        width: 100%;
+        height: 100%;
+        font-size: 2.5vw;
+    }
+    .difficulty-btn, .primary-btn, .action-btn {
+        font-size: 0.9rem;
+        padding: 8px 6px;
+        min-width: 60px;
+        border-radius: 7px;
+    }
+    .left-panel .panel-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    .left-panel .action-btn {
+        width: 48%;
+        min-width: 80px;
+        margin-bottom: 0;
+    }
+    .left-panel .action-btn:last-child {
+        margin-right: 0;
+    }
+    /* Keep Game Actions (Solve/Help) stacked */
+    .right-panel .panel-section {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .right-panel .action-btn {
+        width: 100%;
+        min-width: 0;
+    }
+    .header-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .sudoku-board {
+        grid-template-columns: repeat(9, minmax(4vw, 1fr));
+        grid-template-rows: repeat(9, minmax(4vw, 1fr));
+        max-width: 98vw;
+        max-height: 40vw;
+    }
+    .sudoku-board .cell {
+        font-size: 1.5vw;
+    }
+    .left-panel, .right-panel, .center-panel, .game-board-container {
+        max-width: 98vw;
+        padding: 6px 0;
+    }
+    .panel-section h3 {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+    .difficulty-btn, .primary-btn, .action-btn {
+        font-size: 0.7rem;
+        padding: 5px 2px;
+        min-width: 36px;
+        border-radius: 5px;
+    }
+    .game-board-container {
+        padding: 2px 0;
+    }
+    .left-panel .action-btn {
+        font-size: 0.7rem;
+        padding: 5px 2px;
+        min-width: 36px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .game-layout {
+        grid-template-columns: 280px 1fr 280px;
+        gap: 40px;
+    }
+    
+    .sudoku-board {
+        grid-template-columns: repeat(9, 55px);
+        grid-template-rows: repeat(9, 55px);
+    }
+    
+    .sudoku-board .cell {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+    
+    .sudoku-board .cell input {
+        font-size: 1.5rem;
+    }
+} 

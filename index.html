@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="css/imports.css">
+</head>
+<body>
+    <header class="game-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="https://www.youtube.com/@engineeringbinod" target="_blank" rel="noopener noreferrer">
+                    <img src="Eb_Logo.png" alt="Logo" class="logo">
+                </a>
+                <h1>Sudoku</h1>
+            </div>
+            <div class="header-controls">
+                <div class="difficulty-selector">
+                    <span class="difficulty-label">Difficulty:</span>
+                    <div class="difficulty-buttons">
+                        <button id="easy-btn" class="difficulty-btn">Easy</button>
+                        <button id="medium-btn" class="difficulty-btn">Medium</button>
+                        <button id="hard-btn" class="difficulty-btn">Hard</button>
+                    </div>
+                </div>
+                <button id="new-game-btn" class="primary-btn">New Game</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="game-container">
+        <div class="game-layout">
+            <div class="left-panel">
+                <div class="panel-section">
+                    <h3>Game Controls</h3>
+                    <button id="undo-btn" class="action-btn undo-btn">Undo</button>
+                    <button id="redo-btn" class="action-btn redo-btn">Redo</button>
+                </div>
+            </div>
+            
+            <div class="center-panel">
+                <div class="game-board-container">
+                    <div id="sudoku-board" class="sudoku-board"></div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="panel-section">
+                    <h3>Game Actions</h3>
+                    <button id="solve-btn" class="action-btn solve-btn">Solve</button>
+                    <button id="help-btn" class="action-btn help-btn">Help</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="game-footer">
+        <p>Made with ❤️ -by EngineeringBinod!</p>
+    </footer>
+    
+    <div id="difficulty-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="close-difficulty-modal">&times;</span>
+            <h2>Select Difficulty</h2>
+            <div class="difficulty-modal-buttons">
+                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html> 
